@@ -72,6 +72,9 @@ void ActulizarContractdb(){
 
   		valorOld="vacio";	
 	}
+
+	 if (rmdir("ContractdbNodo.db") == -1)   // Remove the directory
+      	cerr << "Error: " << strerror(errno) << endl;
 }
 
 int main(){
